@@ -1,0 +1,9 @@
+<% @pictures.each do |file| %>
+<tr class="template-download fade">
+  <td class="name"><span><%=file.upload_file_name%></span></td>
+  <td class="preview">
+    <a href="<%=file.upload.url(:original)%>" title="<%=file.upload_file_name%>" rel="gallery" download="<%=file.upload_file_name%>"><img src="<%=file.upload.url(:original)%>"></a>
+  </td><br>
+</tr>
+<% end %>
+<%= link_to "upload file", {:controller => "uploads", :action => "index"}, {:title => "upload file"} %>

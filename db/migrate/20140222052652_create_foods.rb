@@ -3,7 +3,6 @@ class CreateFoods < ActiveRecord::Migration
     create_table :foods do |t|
       t.string :name
       t.references :food_type, index: true
-      t.string :picture
       t.string :price
 
       t.timestamps
